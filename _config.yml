@@ -3,8 +3,9 @@
 # 2. config.build.yml
 # 3. config.yml
 
-name: mitchellrenton.com
-description: My website for stuff!
+title: mitchellrenton.com
+description: The personal site of UX designer and developer Mithcell Renton.
+url: http://mitchellrenton.com
 author:
   name: Mitchell Renton
   email: mitchrenton@gmail.com
