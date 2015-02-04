@@ -1,0 +1,8 @@
+.site-name {
+	@include font-size(20px);
+	letter-spacing: 1px;
+	span {
+		@include font-size(15px);
+		letter-spacing: 0;
+	}
+}

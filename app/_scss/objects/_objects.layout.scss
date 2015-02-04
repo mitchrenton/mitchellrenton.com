@@ -1,0 +1,17 @@
+.container {
+	padding: $spacing-unit;
+	margin-left: auto;
+	margin-right: auto;
+
+	@include media-query(lap-and-up) {
+	}
+
+	@include media-query(portable) {
+		max-width: 970px;
+	}
+
+	@include media-query(desk) {
+		max-width: 1170px;
+	}
+
+}

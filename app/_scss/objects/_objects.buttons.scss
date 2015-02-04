@@ -1,0 +1,9 @@
+.btn--primary {
+	&:hover {
+		background-color: darken($inuit-btn-background,10%);
+		color: white;
+	}
+	&:active {
+		border-color: darken($inuit-btn-background,10%);
+	}
+}

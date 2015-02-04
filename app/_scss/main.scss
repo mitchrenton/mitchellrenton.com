@@ -1,0 +1,150 @@
+// Settings
+$inuit-base-font-size:          16px !default;
+$inuit-base-line-height:        24px !default;
+$inuit-base-text-color:         #333 !default;
+$inuit-base-background-color:   #fff !default;
+$link-color:					blue;
+@import "../_bower_components/inuit-defaults/settings.defaults";
+$breakpoints: (
+    "palm"          "screen and (max-width: 719px)",
+    "lap"           "screen and (min-width: 720px) and (max-width: 1023px)",
+    "lap-and-up"    "screen and (min-width: 720px)",
+    "portable"      "screen and (max-width: 1023px)",
+    "desk"          "screen and (min-width: 1024px)",
+    "retina"        "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)"
+) !default;
+@import "../_bower_components/inuit-responsive-settings/settings.responsive";
+
+// Tools
+@import "../_bower_components/inuit-functions/tools.functions";
+@import "../_bower_components/inuit-mixins/tools.mixins";
+$inuit-responsive-settings: true;
+@import "../_bower_components/inuit-responsive-tools/tools.responsive";
+@import "tools/tools.aliases";
+
+// Generic
+@import "../_bower_components/inuit-normalize/generic.normalize";
+@import "../_bower_components/inuit-reset/generic.reset";
+@import "../_bower_components/inuit-box-sizing/generic.box-sizing";
+@import "../_bower_components/inuit-shared/generic.shared";
+@import "generic/generic.helpers";
+
+// Base
+@import "../_bower_components/inuit-page/base.page";
+$inuit-heading-size-1:  36px !default;
+$inuit-heading-size-2:  30px !default;
+$inuit-heading-size-3:  24px !default;
+$inuit-heading-size-4:  20px !default;
+$inuit-heading-size-5:  16px !default;
+$inuit-heading-size-6:  14px !default;
+@import "base/base.page";
+@import "base/base.links";
+@import "base/base.lists";
+@import "../_bower_components/inuit-headings/base.headings";
+@import "../_bower_components/inuit-paragraphs/base.paragraphs";
+@import "../_bower_components/inuit-lists/base.lists";
+@import "../_bower_components/inuit-images/base.images";
+
+// Objects
+$inuit-btn-padding:         halve($inuit-base-spacing-unit) !default;
+$inuit-btn-padding--small:  halve($inuit-btn-padding) !default;
+$inuit-btn-padding--large:  double($inuit-btn-padding) !default;
+$inuit-btn-background:      #4a8ec2 !default;
+$inuit-btn-color:           #fff !default;
+$inuit-btn-border-width:    1px !default;
+$inuit-btn-border-style:    solid !default;
+$inuit-btn-border-color:    $inuit-btn-background !default;
+$inuit-btn-radius:          3px;
+
+$inuit-enable-btn--small:   false !default;
+$inuit-enable-btn--large:   false !default;
+$inuit-enable-btn--full:    false !default;
+$inuit-enable-btn--pill:    false !default;
+@import "../_bower_components/inuit-buttons/objects.buttons";
+@import "objects/objects.buttons";
+$inuit-enable-layout--tiny:     false !default;
+$inuit-enable-layout--small:    false !default;
+$inuit-enable-layout--large:    false !default;
+$inuit-enable-layout--huge:     false !default;
+$inuit-enable-layout--flush:    false !default;
+$inuit-enable-layout--rev:      false !default;
+$inuit-enable-layout--middle:   false !default;
+$inuit-enable-layout--bottom:   false !default;
+$inuit-enable-layout--right:    false !default;
+$inuit-enable-layout--center:   false !default;
+$inuit-enable-layout--auto:     false !default;
+@import "../_bower_components/inuit-layout/objects.layout";
+@import "objects/objects.layout";
+@import "../_bower_components/inuit-media/objects.media";
+$use-fadeIn:					true;
+@import "../_bower_components/animate-sass/animate";
+body {
+	winuit-enable-layout--autoebkit-backface-visibility: hidden; // Addresses a small issue in webkit: http://bit.ly/NEdoDq
+}
+
+.animated {
+	@include animate-prefixer(animation-duration, $base-duration);
+	@include animate-prefixer(animation-fill-mode, both);
+
+	&.hinge {
+		@include animate-prefixer(animation-duration, $base-duration * 2);
+	}
+}
+
+// Components
+@import "components/components.header";
+@import "components/components.hero";
+@import "components/components.spotlight";
+
+// Trumps
+@import "../_bower_components/inuit-clearfix/trumps.clearfix";
+@import "../_bower_components/inuit-widths/trumps.widths";
+@import "../_bower_components/inuit-widths-responsive/trumps.widths-responsive";
+$inuit-margin:                          $inuit-base-spacing-unit !default;
+$inuit-padding:                         $inuit-base-spacing-unit !default;
+
+$inuit-enable-margins:                  true;
+$inuit-enable-margins--tiny:            false !default;
+$inuit-enable-margins--small:           false !default;
+$inuit-enable-margins--large:           false !default;
+$inuit-enable-margins--huge:            false !default;
+
+$inuit-enable-margins--negative:        false !default;
+$inuit-enable-margins--negative-tiny:   false !default;
+$inuit-enable-margins--negative-small:  false !default;
+$inuit-enable-margins--negative-large:  false !default;
+$inuit-enable-margins--negative-huge:   false !default;
+
+$inuit-enable-margins--none:            false !default;
+
+$inuit-enable-paddings:                 false !default;
+$inuit-enable-paddings--tiny:           false !default;
+$inuit-enable-paddings--small:          false !default;
+$inuit-enable-paddings--large:          false !default;
+$inuit-enable-paddings--huge:           false !default;
+
+$inuit-enable-paddings--none:           false !default;
+@import "../_bower_components/inuit-spacing/trumps.spacing";
+$inuit-enable-responsive-margins:                   false !default;
+$inuit-enable-responsive-margins--tiny:             false !default;
+$inuit-enable-responsive-margins--small:            false !default;
+$inuit-enable-responsive-margins--large:            false !default;
+$inuit-enable-responsive-margins--huge:             false !default;
+
+$inuit-enable-responsive-margins--negative:         false !default;
+$inuit-enable-responsive-margins--negative-tiny:    false !default;
+$inuit-enable-responsive-margins--negative-small:   false !default;
+$inuit-enable-responsive-margins--negative-large:   false !default;
+$inuit-enable-responsive-margins--negative-huge:    false !default;
+
+$inuit-enable-responsive-margins--none:             false !default;
+
+$inuit-enable-responsive-paddings:                  false !default;
+$inuit-enable-responsive-paddings--tiny:            false !default;
+$inuit-enable-responsive-paddings--small:           false !default;
+$inuit-enable-responsive-paddings--large:           false !default;
+$inuit-enable-responsive-paddings--huge:            false !default;
+
+$inuit-enable-responsive-paddings--none:            false !default;
+@import "../_bower_components/inuit-spacing-responsive/trumps.spacing-responsive";
+@import "../_bower_components/inuit-print/trumps.print";

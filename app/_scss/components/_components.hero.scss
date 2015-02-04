@@ -1,0 +1,42 @@
+.hero {
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: 50% 0;
+	@include media-query(palm) {
+		background-image: url('/img/hero-mobile-x2.jpg');
+		background-size: cover;
+	}
+
+	@include media-query(lap) {
+		background-image: url('/img/hero-tablet.jpg');
+	}
+
+	@include media-query(lap-and-up) {
+		background-image: url('/img/hero.jpg');
+	}
+
+	h1 {
+
+		a {
+			color: white;
+			&:hover span {
+				color: white;
+			}
+		}
+
+		span {
+			text-transform: none;
+			color: rgba(255,255,255,.4);
+		}
+	}
+
+	h2 {
+		@include media-query(palm) {
+			margin: 50px 0;
+		}
+		@include media-query(lap-and-up) {
+			margin: 150px 0;
+		}
+		color: #fff;
+	}
+}
