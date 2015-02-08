@@ -25,3 +25,9 @@ markdown: redcarpet
 #   extensions: ['fenced_code_blocks', 'smart']
 
 pygments: true
+
+# Collections
+collections:
+  projects:
+    output: true
+    permalink: /projects/:title

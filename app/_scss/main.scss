@@ -73,10 +73,11 @@ $inuit-enable-layout--bottom:   false !default;
 $inuit-enable-layout--right:    false !default;
 $inuit-enable-layout--center:   false !default;
 $inuit-enable-layout--auto:     false !default;
+$inuit-layout-gutter:			30px;
 @import "../_bower_components/inuit-layout/objects.layout";
 @import "objects/objects.layout";
 @import "../_bower_components/inuit-media/objects.media";
-$use-fadeIn:					true;
+$use-fadeIn:  true;
 @import "../_bower_components/animate-sass/animate";
 body {
 	winuit-enable-layout--autoebkit-backface-visibility: hidden; // Addresses a small issue in webkit: http://bit.ly/NEdoDq
@@ -95,6 +96,9 @@ body {
 @import "components/components.header";
 @import "components/components.hero";
 @import "components/components.spotlight";
+$fa-font-path:        "//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts"; // for referencing Bootstrap CDN font files directly
+$fa-css-prefix:       ico;
+@import "../_bower_components/fontawesome/scss/font-awesome";
 
 // Trumps
 @import "../_bower_components/inuit-clearfix/trumps.clearfix";
