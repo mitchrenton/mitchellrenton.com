@@ -20,10 +20,15 @@
 	text-align: center;
 }
 
-.text-ellipsis {
+.text--ellipsis {
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	overflow: hidden;
+}
+
+.text--amp {
+	font-family: Baskerville, Palatino, "Book Antiqua", serif;
+	font-style: italic;
 }
 
 /* Display Helpers */
