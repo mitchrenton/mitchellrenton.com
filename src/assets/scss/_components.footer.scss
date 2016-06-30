@@ -1,0 +1,14 @@
+// FOOTER
+
+footer {
+	margin-top: $base-spacing-unit;
+	border-top: 1px solid rgba(0,0,0,.1);
+}
+
+.nav--social a {
+	color: $captionColour;
+
+	&:hover {
+		color: $bodyColour;
+	}
+}

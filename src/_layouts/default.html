@@ -1,0 +1,26 @@
+<!doctype html>
+<html class="no-js" lang="en-gb">
+
+  {% include head.html %}
+
+  <body>
+
+    <div id="js-transition" class="site-page--full">
+
+      <div class="{{ page.page_class }}">
+
+        {% include header.html %}
+
+        {{ content }}
+
+      </div>
+
+      {% include footer.html %}
+
+    </div>
+
+    {% include scripts.html %}
+
+  </body>
+
+</html>

@@ -1,0 +1,10 @@
+// LAYOUT
+
+.grid__cell {
+	font-size: initial;
+}
+
+[class*="grid__col-"] {
+	padding-top: 0;
+	padding-bottom: 0;
+}

@@ -1,5 +1,12 @@
 source "http://rubygems.org"
 
-gem 'jekyll', '~>1.4.0'
+gem 'jekyll'
 gem 'redcarpet'
-gem 'sass', '>=3.2'
+
+# jekyll plugins
+gem 'jekyll-archives'
+gem 'jekyll-feed'
+gem 'jekyll-gist'
+gem 'jekyll-paginate'
+gem 'jekyll-sitemap'
+gem 'jekyll-seo-tag'

@@ -1,0 +1,165 @@
+// HEADER
+
+.site-header {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-color: rgba(0,0,0,.1);
+	background-color: rgba(255,255,255,.8);
+	z-index: 1;
+}
+
+.site-name, .site-nav {
+	a {
+		display: inline-block;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		@include fontsize(15,all);
+		padding: $base-spacing-unit--half $base-spacing-unit;
+		color: $bodyColour;
+	}
+}
+
+.site-name {
+	a {
+		margin-left: 0;
+		padding-left: 0;
+	}
+}
+
+.site-nav { 
+	li:last-child a {
+		margin-right: 0;
+		padding-right: 0;
+	}
+}
+
+.site-nav__item {
+	a {
+		color: rgba(0,0,0,.6);
+		&:hover {
+			color: $bodyColour;
+		}
+	}
+	&--active a {
+		color: #000;
+	}
+}
+
+%site-header--reverse {
+	border-color: rgba(255,255,255,.1);
+	background-color: transparent;
+	.site-nav__item, .site-name {
+		a {
+			color: rgba(255,255,255,.6);
+			&:hover {
+				color: white;
+			}
+		}
+		&--active a {
+			color: #fff;
+		}
+	}
+}
+
+// Off-canvas nav
+
+html.js {
+
+	.nav-collapse {
+		clip: rect(0 0 0 0);
+		display: block;
+		max-height: 0;
+		overflow: hidden;
+		position: absolute;
+		zoom: 1;
+
+		@include breakpoint(break-2) {
+			max-height: none;
+			position: relative;
+		}
+		&.opened {
+			position: fixed !important;
+			text-align: center;
+			left: 0;
+			top: 0;
+			width: 100%;
+			max-height: none !important;
+			height: auto;
+			padding: 4rem 0 2rem;
+			clip: auto;
+			background: #000;
+			li {
+				display: block;
+				&:last-child a {
+					padding-right: $base-spacing-unit--half;
+					margin-right: $base-spacing-unit--half;
+				}
+			}
+			a {
+				color: #fff;
+				display: block;
+				&:hover, &:active, &:focus {
+					color: darken(#fff,10%);
+				}
+			}
+		}
+	}
+}
+
+.site-header .section--no-pad {
+	position: static;
+}
+
+.disable-pointer-events {
+	pointer-events: none;
+}
+
+.nav-toggle {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 10;
+
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-touch-callout: none;
+	user-select: none;
+
+	display: inline-block;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	@include fontsize(15,all);
+	margin-left: $base-spacing-unit--half;
+	padding: $base-spacing-unit--half;
+	color: $bodyColour;
+
+	&:hover, &:active, &:focus {
+		color: lighten($bodyColour,10%);
+	}
+
+	&.active {
+		color: #fff;
+	}
+
+	@include breakpoint(break-2) {
+		display: none;
+	}
+
+	&:before {
+		padding-right: 8px;
+		font-family: FontAwesome;
+		font-weight: normal;
+		font-style: normal;
+		display: inline-block;
+		text-decoration: inherit;
+		content: "\f0c9";
+	}
+}
+
+.page--dark, .site-page--home {
+	.nav-toggle {
+		color: #fff;
+	}
+}
