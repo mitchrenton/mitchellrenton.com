@@ -1,0 +1,101 @@
+// CV
+/*
+.cv {
+	padding-top: 2rem;
+}
+
+.cv__image {
+
+}
+
+.cv__section  {
+	padding: $base-spacing-unit;
+}
+
+.cv__intro {
+	p {
+		padding-bottom: 1rem;
+	}
+}
+
+.cv__meta {
+	dt {
+		@include fontsize(14,all);
+		color: #777;
+	}
+	dd {
+		margin: 0 0 1rem;
+		@include fontsize(16,all);
+	}
+	li {
+		@include fontsize(16,all);
+	}
+}
+
+.cv__dt {
+	@include fontsize(14,all);
+	color: #777;
+}
+
+.cv__header {
+	//@include baseline($fontsize: 14, $font: $bodytype, $lineheight: 2, $below: 2, $breakpoint: 0);
+	
+}
+
+.cv__title {
+	@include sassline(36, $bodytype, 2, 0, all);
+	text-transform: uppercase;
+}
+
+.cv__sub-title {
+	@include sassline(24, $bodytype, 1.5, 3, all);
+}
+
+
+
+.cv__date, .cv__location {
+	padding-left: $base-spacing-unit;
+}
+
+*/
+
+.cv .cv__ss-title {
+	@include sassline(20, $bodytype, 1.5, 2, all);
+	font-weight: normal;
+	font-family: 'Source Sans Pro', sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+.cv__item {
+	padding-bottom: 2rem;
+	margin-bottom: 2rem;
+	border-bottom: 1px solid #e1e1e1;
+
+	p {
+		@include sassline(zeta, $bodytype, 2, 1, all);
+	}
+
+	h4 {
+		@include sassline(26, $bodytype, 1.5, .5, all);
+		font-family: 'Source Sans Pro', sans-serif;
+		//font-weight: normal;
+		text-transform: none;
+		letter-spacing: 0;
+		color: #2981B5;
+	}
+
+	h5, h6 {
+		@include sassline(16, $bodytype, 1.2, .5, all);
+		font-family: 'Source Sans Pro', sans-serif;
+		font-weight: normal;
+		margin: 0;
+		span {
+			font-weight: normal;
+		}
+	}
+	&--last {
+		border: 0;
+		padding-bottom: 3rem;
+	}
+}

@@ -1,0 +1,51 @@
+// http://mitchellrenton.com stylesheet
+
+//Settings
+@import "settings.defaults.scss",
+		"../../../bower_components/typeplate-starter-kit/scss/_typeplate-vars.scss",
+		"../../../bower_components/sassline/assets/sass/sassline-base/_variables.scss",
+		"../../../bower_components/reflex-grid/scss/reflex/_variables.scss";
+
+//Tools
+@import "tools.mixins.scss",
+		"../../../bower_components/sassline/assets/sass/sassline-base/_mixins.scss",
+		"../../../bower_components/sassline/assets/sass/sassline-base/_modular-scale.scss",
+		"../../../bower_components/reflex-grid/scss/reflex/_mixins.scss",
+		"../../../bower_components/typeplate-starter-kit/scss/_typeplate-mixins.scss";
+
+//Generic
+@import	"generic.normalize.scss";
+		
+//Base
+@import "base.page.scss",
+		"../../../bower_components/sassline/assets/sass/sassline-base/_typography.scss",
+		"../../../bower_components/sassline/assets/sass/modules/_globals.scss",
+		"base.type.scss",
+		"../../../bower_components/typeplate-starter-kit/scss/_typeplate-helpers.scss",
+		"base.shared.scss";
+
+//Objects
+@import "objects.buttons.scss",
+		"../../../bower_components/reflex-grid/scss/reflex/_grid.scss",
+		"../../../bower_components/reflex-grid/scss/reflex/_helpers.scss",
+		"../../../bower_components/sassline/assets/sass/sassline-base/_layouts.scss", /* Think about replaing the layouts partial */
+		"objects.layout.scss",
+		"objects.icons.scss",
+		"../../../bower_components/font-awesome/scss/font-awesome.scss",
+		"../../../bower_components/animate-sass/_animate.scss",
+		"objects.page-transitions.scss",
+		"objects.shared.scss",
+		"../../../bower_components/hover/scss/hover.scss",
+		"objects.gallery.scss",
+		"objects.nav.scss";
+
+//Components
+@import "components.header.scss",
+		"components.footer.scss",
+		"components.case-studies.scss",
+		"components.cv.scss",
+		"components.process.scss",
+		"components.hero.scss",
+		"components.article.scss";
+
+//Trumps

@@ -1,0 +1,40 @@
+// OBJECTS SHARED
+
+.no-margin {
+	margin: 0 !important;
+}
+
+.text--center {
+	text-align: center;
+}
+
+.text--right {
+	text-align: right;
+}
+
+.text--muted {
+	opacity: .6;
+}
+
+.text--caps {
+	text-transform: uppercase;
+}
+
+.list--stripped {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.list--2-cols {
+	column-count: 2;
+	column-gap: $base-spacing-unit--double;
+}
+
+.float--left {
+	float: left;
+}
+
+.float--right {
+	float: right;
+}

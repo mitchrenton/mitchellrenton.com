@@ -1,0 +1,67 @@
+<footer>
+
+	<div class="section">
+
+		<div class="text--center typeset">
+
+			<p class="text--caps"><small>Get in touch</small></p>
+
+			<a href="mailto:mitchrenton@gmail.com?subject=Hi there Mitch" title="Get in touch" class="button button--cta">mitchrenton@gmail.com</a>
+
+		</div>
+
+	<div class="section">
+		
+		<ul class="nav nav--inline nav--social text--center">
+
+			<li><a href="https://twitter.com/mitchrenton"><i class="icon icon-lg icon-twitter"></i></a></li>
+
+			<li><a href="https://www.facebook.com/mitchrenton"><i class="icon icon-lg icon-facebook"></i></a></li>
+
+			<li><a href="https://ch.linkedin.com/in/mitchellrenton"><i class="icon icon-lg icon-linkedin"></i></a></li>
+
+			<li><a href="https://github.com/mitchrenton"><i class="icon icon-lg icon-github"></i></a></li>
+
+			<li><a href="https://instagram.com/mitchrenton"><i class="icon icon-lg icon-instagram"></i></a></li>
+
+		</ul>
+
+	</div>
+
+	<div class="section">
+		
+		<nav class="site-footer-nav">
+			
+			<ul class="nav nav--inline text--center">
+				
+				{% for link in site.data.nav.main %}
+	        
+					{% assign current = nil %}
+
+					{% if page.url == link.url %}
+
+						{% assign current = 'site-nav__item--active' %}
+
+					{% endif %}
+
+					<li class="site-nav__item {{ current }}">
+
+						<a href="{{ link.url }}" title="{{ link.desc }}">{{ link.title }}</a>
+
+					</li>
+
+				{% endfor %}
+
+			</ul>
+
+		</nav>
+
+	</div>
+
+	<div class="section">
+		
+		<p class="text--center text--muted typeset"><small>Content &copy; Copyright {{ site.time | date: '%Y' }} Mitchell Renton</small></p>
+
+	</div>
+
+</footer>

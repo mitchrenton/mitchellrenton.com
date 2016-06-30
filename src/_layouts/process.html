@@ -1,0 +1,52 @@
+---
+layout: default
+---
+
+<main class="site-page site-page--full site-page--process">
+
+	<div class="section">
+
+		<div class="grid typeset">
+			
+			<div class="grid__col-xs-12 grid__col-md-4">
+
+				<a class="process__title text--caps" href="/process/">The Process</a>
+
+				<nav class="process-nav">
+					
+					<ul class="nav">
+
+						{% for link in site.data.nav.process %}
+		                
+			                {% assign current = nil %}
+			                
+			                {% if page.url == link.url %}
+			                
+			                  {% assign current = 'process-nav__item--active' %}
+			                
+			                {% endif %}
+			                
+			                <li class="process-nav__item {{ current }}">
+			      
+			                  <a href="{{ link.url }}">{{ link.title }}</a>
+			      
+			                </li>
+			      
+			              {% endfor %}
+					</ul>
+
+				</nav>
+
+			</div>
+			
+			<div class="grid__col-xs-12 grid__col-md-8 animated fadeInRightBig">
+
+				{{ content }}
+
+			</div>
+
+		</div>
+
+	</div>
+
+</main>
