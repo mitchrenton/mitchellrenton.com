@@ -44,11 +44,11 @@
 	color: #fff;
 	font-family: "Playfair Display", serif;
 	font-weight: 900;
-	@include sassline(62, $headingtype, 4.5, 0, all);
+	//@include sassline(62, $headingtype, 4.5, 0, all);
 }
 
 .hero__sub-title {
-	@include sassline(zeta, $bodytype, 2.5, 2, all);
+	//@include sassline(zeta, $bodytype, 2.5, 2, all);
 	text-transform: uppercase;
 	color: #fff;
 	letter-spacing: 4px;
@@ -56,13 +56,13 @@
 }
 
 .hero__actions {
-	margin-left: -$base-spacing-unit;
-	padding-top: $base-spacing-unit;
+	margin-left: -$spacing;
+	padding-top: $spacing;
 }
 
 .hero__action {
 	vertical-align: top;
-	padding-left: $base-spacing-unit;
+	padding-left: $spacing;
 
 	.button {
 		width: 100%;

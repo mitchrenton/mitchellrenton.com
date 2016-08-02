@@ -4,7 +4,7 @@
 
 	.process-nav__item {
 
-		@include sassline($fontsize: 22, $font: $headingtype, $lineheight: 1, $below: 2, $breakpoint: all)
+		//@include sassline($fontsize: 22, $font: $headingtype, $lineheight: 1, $below: 2, $breakpoint: all)
 
 		a {
 			@include pop();
@@ -44,8 +44,8 @@
 }
 
 .typeset .process__title {
-	@include fontsize(15,all);
-	padding-bottom: $base-spacing-unit;
+	//@include fontsize(15,all);
+	padding-bottom: $spacing;
 	letter-spacing: 2px;
 	color: #fff;
 	opacity: .6;

@@ -1,23 +1,38 @@
 // ARTICLE
-/*
-.article__header {
-	//padding: $base-spacing-unit $base-spacing-unit 0;
-}
 
-.article__body {
-	max-width: 40em;
-	margin: 0 auto;
-	padding: 0 $base-spacing-unit;
-}
+@include breakpoint($break-md) {
 
-
-.article__body h2 {
-	&:after {
-		content: "";
-		display: block;
-		width: 35px;
-		height: 3px;
-		background-color: #999;
+	.article {
+		max-width: 680px;
+		margin: 0 auto;
 	}
+
+	.article__intro {
+		margin: 0 auto;
+		width: 80%;
+	}
+
+	.article__image {
+		max-width: 150px;
+		margin-right: $spacing-md;
+		img {
+			border-radius: 500px;
+		}
+	}
+
+	.article__heading {
+		@include typi($h1-map);
+		font-weight: bold;
+	}
+
+	.article__subheading {
+	}
+
+	.article__support-text {
+		@include typi($p-map);
+	}
+
+	.article__blockquote {
+	}
+
 }
-*/

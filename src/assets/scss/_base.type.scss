@@ -1,14 +1,56 @@
 // TYPE
 
-.typeset {
-	
-	p a, li a {
-		text-shadow: none;
-	}
+body {
+	font-family: $bodyFont;
+	line-height: 1.4;
+    -moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	color: $bodyColour;
+}
 
-	small {
-		font-family: "Source Sans Pro", sans-serif;
+h1, h2, h3, h4, h5, p, {
+	margin: 0;
+	padding: 0;
+}
+
+h1, h2, h3 {
+	font-family: $headingFont;
+}
+
+h1 {
+	@include typi($h1-map);
+	margin-bottom: vr(1);
+}
+
+h2 {
+	@include typi($h2-map);
+	padding-top: vr(1);
+	margin-bottom: vr(1);
+}
+
+h3 {
+	@include typi($h3-map);
+	padding-top: vr(.5);
+	margin-bottom: vr(.5);
+}
+
+p {
+	@include typi($p-map);
+	margin: 0 0 vr(1);
+}
+
+a {
+	color: #000;
+	border-bottom: 1px dashed #ccc;
+	text-decoration: none;
+
+	&:hover {
+		border-bottom-style: solid;
+		border-color: #333;
 	}
+}
+
+article {
 
 	figcaption small {
 		line-height: 2rem;
@@ -16,7 +58,6 @@
 
 	.pullquote {
 		float: left;
-		@include fontsize(19,all)
 		text-transform: uppercase;
 		@extend .text--muted;
 		@extend .text--right;
@@ -24,22 +65,17 @@
 	}
 
 	.lead {
-		@include sassline(delta, $headingtype, 2.5, 2, all);
 	}
 
 	blockquote p {
-		@include sassline(delta, $headingtype, 2.5, 2, all);
-		font-family: "Playfair Display", serif;
+		font-family: $headingFont;
 		font-style: normal;
 	}
 
 	figure {
-		margin: $base-spacing-unit--double 0;
+		margin: $spacing-lg 0;
 	}
-} 
 
-strong, b {
-	font-weight: bold;
 }
 
 .external-link {

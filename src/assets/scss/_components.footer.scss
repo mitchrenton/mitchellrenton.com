@@ -1,14 +1,21 @@
 // FOOTER
 
 footer {
-	margin-top: $base-spacing-unit;
+	margin-top: $spacing;
 	border-top: 1px solid rgba(0,0,0,.1);
 }
 
 .nav--social a {
 	color: $captionColour;
+	border: none;
 
 	&:hover {
 		color: $bodyColour;
+	}
+}
+
+.site-footer-nav {
+	a {
+		border: none;
 	}
 }

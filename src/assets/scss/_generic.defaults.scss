@@ -1,0 +1,14 @@
+// Defaults
+
+img {
+	-ms-interpolation-mode: bicubic;
+	height: auto;
+	vertical-align: middle;
+	width: 100%;
+
+	@include breakpoint($break-sm) {
+		margin: 0 auto;
+		max-width: 100%;
+		width: auto;
+	}
+}

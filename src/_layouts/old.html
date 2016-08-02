@@ -5,11 +5,11 @@
 
   <body>
 
-    <div id="js-transition">
+    <div id="js-transition" class="site-page--full">
 
-      {% include header.html %}
+      <div class="{{ page.page_class }}">
 
-      <div class="container container--top">
+        {% include header.html %}
 
         {{ content }}
 

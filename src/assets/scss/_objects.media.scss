@@ -1,0 +1,30 @@
+// Media Object
+
+.media {
+	margin-bottom: vr(3);
+}
+
+.media, .media__body {
+	overflow: hidden;
+}
+
+.media__body {
+
+	p {
+		@include typi($small-p);
+	}
+
+	h3 {
+		padding-top: 0;
+	}
+}
+
+.media__image {
+	float: left;
+	margin-right: $spacing-md;
+
+	img {
+		max-width: 250px;
+		display: block;
+	}
+}

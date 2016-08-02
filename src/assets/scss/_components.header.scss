@@ -16,8 +16,9 @@
 		display: inline-block;
 		text-transform: uppercase;
 		letter-spacing: 2px;
-		@include fontsize(15,all);
-		padding: $base-spacing-unit--half $base-spacing-unit;
+		font-size: 15px;
+		line-height: 2;
+		padding: $spacing-xs $spacing;
 		color: $bodyColour;
 	}
 }
@@ -26,6 +27,7 @@
 	a {
 		margin-left: 0;
 		padding-left: 0;
+		border: none;
 	}
 }
 
@@ -39,12 +41,15 @@
 .site-nav__item {
 	a {
 		color: rgba(0,0,0,.6);
+		border: none;
 		&:hover {
+			border-bottom: 1px solid #333;
 			color: $bodyColour;
 		}
 	}
 	&--active a {
 		color: #000;
+		border-bottom: 1px solid #333;
 	}
 }
 
@@ -76,7 +81,7 @@ html.js {
 		position: absolute;
 		zoom: 1;
 
-		@include breakpoint(break-2) {
+		@include breakpoint($break-sm) {
 			max-height: none;
 			position: relative;
 		}
@@ -94,8 +99,8 @@ html.js {
 			li {
 				display: block;
 				&:last-child a {
-					padding-right: $base-spacing-unit--half;
-					margin-right: $base-spacing-unit--half;
+					padding-right: $spacing-xs;
+					margin-right: $spacing-xs;
 				}
 			}
 			a {
@@ -130,9 +135,9 @@ html.js {
 	display: inline-block;
 	text-transform: uppercase;
 	letter-spacing: 2px;
-	@include fontsize(15,all);
-	margin-left: $base-spacing-unit--half;
-	padding: $base-spacing-unit--half;
+	//@include fontsize(15,all);
+	margin-left: $spacing-xs;
+	padding: $spacing-xs;
 	color: $bodyColour;
 
 	&:hover, &:active, &:focus {

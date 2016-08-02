@@ -1,9 +1,12 @@
 // SETTINGS
 
 // Spacing
-$base-spacing-unit : 			24px;
-$base-spacing-unit--half :		$base-spacing-unit / 2;
-$base-spacing-unit--double :	$base-spacing-unit * 2;
+$spacing: 						24px;
+$spacing-xs:					$spacing/2;
+$spacing-sm:					$spacing/1.5;
+$spacing-md:					$spacing*1.5;
+$spacing-lg:					$spacing*2;
+$spacing-xl:					$spacing*4;
 
 // Text colours
 $headingColour: 				#333;
@@ -17,18 +20,12 @@ $captionColour: 				lighten($bodyColour,30%);
 $backgroundColour: 				#fff;
 $codeBackgroundColour: 			#F5F4F2 !default;
 
-// Icons
-$fa-font-path:        			"../../../assets/fonts";
-$fa-font-size-base:   			16px;
-$fa-line-height-base: 			1.5;
-$fa-css-prefix:        			icon;
-
-// Layout
-$av-gutter: 					$base-spacing-unit;
-$av-width-class-namespace: 		"grid__cell--";
-$av-enable-responsive: 			true;
-$av-enable-grid-large:			true;
-$av-enable-grid-auto:			true;
+// Breakpoints
+$break-xs:						375px;
+$break-sm:						640px;
+$break-md:						800px;
+$break-lg:						1025px;
+$break-xl:						1600px;
 
 // Animations
 $use-fadeInRightBig: 			true;
@@ -41,6 +38,10 @@ $use-fadeOut: 					true;
 $use-pulse: 					true;
 $base-duration: 				.4s;
 
-// Hover animations
-$includeClasses: 				false;
-$nameSpace: 					'animate' 
+$mobile-portrait: 				max-width $break-xs;
+$mobile-landscape: 				min-width $break-xs+1;
+$mobile:						max-width $break-sm;
+
+$tablet:						min-width $break-sm;
+$tablet-portrait:				($break-sm $break-md) (orientation portrait);
+$tablet-landscape:				($break-sm $break-md) (orientation landscape);

@@ -1,0 +1,46 @@
+// Type Settings
+
+// Fonts
+$bodyFont:						'Source Sans Pro', sans-serif;
+$headingFont:					'Playfair Display', serif;
+
+// Modular Scale
+$ms-ratio:						$major-second;
+
+// Type breakpoints
+$breakpoints: (
+	small: $break-sm,
+	large: $break-lg
+);
+
+$typi: (
+	null: (16px,1.5),
+	small: 18px,
+	large: (20px,1.58)
+);
+
+// Type Maps
+$h1-map: (
+	null: (ms(4), 1.4),
+	large: (ms(3), 2)
+);
+
+$h2-map: (
+	null: (ms(3), 1.3),
+	large: (ms(2), 1.6)
+);
+
+$h3-map: (
+	null: (ms(2), 1.5),
+	large: (ms(1), 1.6)
+);
+
+$p-map: (
+	null: (ms(1), 1.5),
+	large: (ms(0), 1.6)
+);
+
+$small-p: (
+	null: (ms(1), 1.5),
+	large: (ms(-1), 1.5)
+);
